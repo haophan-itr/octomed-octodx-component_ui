@@ -1,0 +1,79 @@
+@import '../../../../styles/variables';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text-only-badge {
+  border-radius: 16px;
+  height: 32px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  &.--isStrong {
+    background-color: $accent-blue-100;
+    padding: 0px 12px;
+    .text-badge {
+      color: $white;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &.--isLight {
+    background-color: $accent-white-light-500;
+    padding: 0px 12px;
+    .text-badge {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: $blue-dark;
+    }
+    &.--isSmall {
+      .text-badge {
+        font-weight: 400;
+        color: $blue-dark;
+      }
+    }
+    &.--isExtraSmall {
+      .text-badge {
+        font-weight: 500;
+        color: $blue-dark;
+      }
+    }
+  }
+
+  &.--isSmall {
+    height: 24px;
+    padding:0 8px;
+    .text-badge {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &.--isExtraSmall {
+    height: 16px;
+    padding: 0 6px;
+    .text-badge {
+      height: 16px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+      letter-spacing: 0.012em;
+    }
+  }
+}
+
+
+
+
+

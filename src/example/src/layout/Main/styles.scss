@@ -1,0 +1,11 @@
+.main {
+  width: 100%;
+  .custom-sidebar {
+    &__bottom {
+      display: none;
+    }
+  }
+  #container-main-page {
+    min-height: calc(100vh - 3rem);
+  }
+}

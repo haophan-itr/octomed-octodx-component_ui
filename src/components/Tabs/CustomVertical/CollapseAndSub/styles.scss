@@ -1,0 +1,137 @@
+@import '../../../../styles/variables';
+
+@mixin menuItem ($bgColor) {
+  background-color: $bgColor;
+  color: $accent-light-green;
+  // border-right: 4px solid $accent-light-green;
+  font-weight: 600;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container-collapse-sub {
+  display: flex;
+  width: 100%;
+  .content-collapse-sub {
+    margin-left: 1rem;
+  }
+  .ant-menu-inline {
+    .ant-menu:not(.ant-menu-horizontal) {
+      .ant-menu-item-selected {
+        @include menuItem(transparent);
+      }
+    }
+    .ant-menu-item-active {
+      @include menuItem(transparent);
+    }
+  }
+}
+
+.container-tab-antd {
+  display: flex;
+  width: 100%;
+  .content-menu {
+    margin-left: 1rem;
+  }
+}
+
+// .ant-menu-vertical {
+//   font-style: normal;
+//   color:$accent-blue-light-100;
+//   .ant-menu-item {
+//     display: flex;
+//     align-items: center;
+//   }
+//   .ant-menu-item-active {
+//     @include menuItem($white-light);
+//   }
+//   .ant-menu-submenu {
+//     .ant-menu-submenu-title {
+//       display: flex;
+//       align-items: center;
+//       &:hover {
+//         color: $accent-light-green;
+//         i {
+//           color: $accent-light-green;
+//         }
+//       }
+//     }
+//   }
+//   .ant-menu-vertical-left {
+//     border-right: unset;
+//   }
+// }
+
+.ant-menu:not(.ant-menu-inline) {
+  .ant-menu-submenu-open {
+    color: $accent-light-green;
+  }
+}
+
+.ant-menu:not(.ant-menu-horizontal) {
+  .ant-menu-item-selected {
+    @include menuItem($white-light);
+  }
+}
+
+.ant-menu-inline {
+  font-style: normal;
+  color:$accent-blue-light-100;
+  border-right: unset;
+  .ant-menu-item-active {
+    @include menuItem($white-light);
+  }
+  .ant-menu-item-selected {
+    &::after {
+      border-right: 3px solid $accent-light-green;
+      border-radius: 2px 0 0 2px;
+    }
+  }
+  .ant-menu-submenu {
+    .ant-menu-submenu-title {
+      display: flex;
+      align-items: center;
+      .ant-menu-title-content {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 12px;
+      }
+      &:hover {
+        color: $accent-light-green;
+        i {
+          color: $accent-light-green;
+        }
+      }
+    }
+    .ant-menu-sub {
+      background: transparent;
+    }
+    &:hover {
+      .ant-menu-submenu-arrow {
+        color: $opacity-black-85;
+      }
+    }
+  }
+  .ant-menu-submenu-selected {
+    .ant-menu-submenu-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: $accent-light-green;
+      i {
+        color: $accent-light-green;
+      }
+    }
+  }
+}
+
+.icon-tab {
+  display: flex;
+  height: 20px;
+  width: 20px;
+}

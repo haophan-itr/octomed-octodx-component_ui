@@ -1,0 +1,82 @@
+@import '../../../../styles/variables';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin css-checkbox () {
+  .custom-checkbox-input {
+    display: none;
+    & + label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      outline: none !important;
+      user-select: none;
+      cursor: pointer;
+      padding: 0px 12px;
+      width: 100%;
+      &::before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid $accent-white-1;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+    }
+
+    &:checked {
+      & + label::before {
+        content: "";
+        background-image: url("../../../../static/images/checkbox-icon.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 1px solid $accent-light-green;
+        background-color: $accent-light-green;
+        background-position: center;
+      }
+    }
+  }
+}
+
+.custom-checkbox-block-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  width: 240px;
+  background-color: $accent-white-light-600;
+  color: $black-shade-5;
+
+  &.checkbox-input-large {
+    height: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $black-shade-5;
+    @include css-checkbox();
+  }
+
+  &.checkbox-input-small {
+    height: 32px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color:  $black-shade-5;
+    @include css-checkbox();
+  }
+
+  .custom-checkbox-label {
+    margin-left: 0.75rem;
+  }
+}
+
+.--isChecked {
+  background-color:$white-light;
+}

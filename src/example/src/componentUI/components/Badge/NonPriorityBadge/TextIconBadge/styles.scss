@@ -1,0 +1,229 @@
+@import '../../../../styles/variables';
+
+.text-icon-badge {
+  border-radius: 16px;
+  height: 32px;
+  width: fit-content;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  .icon-left-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    .icon-component {
+      display: flex;
+    }
+  }
+
+  .icon-right-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    .icon-component {
+      display: flex;
+    }
+  }  
+
+  &.--isStrong {
+    background-color: $accent-blue-100;
+    &.--isSmall {
+      .icon-left-container,
+      .icon-right-container {
+        .text-badge {
+          color: $white;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 18px;
+        }
+      }
+    }
+    .icon-left-container {
+      padding: 0 12px 0 6px;
+      .text-badge {
+        color: $white;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+      }
+      .icon-component {
+        margin-right: 4px;
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+    .icon-right-container {
+      padding: 0 6px 0 12px;
+      .text-badge {
+        color: $white;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+      }
+      .icon-component {
+        margin-left: 4px;
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+  
+  &.--isLight {
+    background-color: $accent-white-light-500;
+    .icon-right-container {
+      padding: 0 6px 0 12px;
+      .text-badge {
+        color: $blue-dark;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+      .icon-component {
+        margin-left: 4px;
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+    .icon-left-container {
+      padding: 0 12px 0 6px;
+      .icon-component {
+        margin-right: 4px;
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+      .text-badge {
+        color: $blue-dark;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+    &.--isSmall {
+      .text-badge {
+        letter-spacing: 0.01em;
+      }
+      .icon-left-container {
+        .text-badge {
+          color: $blue-dark;
+          letter-spacing: 0.01em;
+        }
+      }
+      .icon-right-container {
+        .text-badge {
+          color: $blue-dark;
+          letter-spacing: 0.01em;
+        }
+      }
+    }
+    &.--isExtraSmall {
+      .icon-left-container {
+        .text-badge {
+          color: $blue-dark;
+          font-weight: 500;
+          height: 16px;
+          line-height: 15px;
+        }
+      }
+      .icon-right-container {
+        .text-badge {
+          color: $blue-dark;
+          font-weight: 500;
+          height: 16px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+  
+  &.--isSmall {
+    height: 24px;
+    .icon-left-container {
+      padding: 0 8px 0 4px;
+      .text-badge {
+        color: $white;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+      }
+      .icon-component {
+        margin-right: 4px;
+        img {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+    .icon-right-container {
+      padding: 0 4px 0 8px;
+      .text-badge {
+        color: $white;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+      }
+      .icon-component {
+        margin-left: 4px;
+        img {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+  }
+
+  &.--isExtraSmall {
+    height: 16px;
+    .icon-left-container {
+      padding: 0 6px 0 0;
+      .text-badge {
+        color: $white;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 1px;
+      }
+      .icon-component {
+        margin-right: 2px;
+        img {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+    .icon-right-container {
+      padding: 0 0 0 6px;
+      .text-badge {
+        color: $white;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 1px;
+      }
+      .icon-component {
+        margin-left: 2px;
+        img {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+  }
+}

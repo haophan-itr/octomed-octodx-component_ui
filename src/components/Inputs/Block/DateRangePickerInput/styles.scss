@@ -1,0 +1,172 @@
+@import '../../../../styles/variables';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.custom-date-range-picker-input {
+  background-color: $accent-white-light-600;
+  &__container__reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    border: 1px solid $accent-white-light-300;
+
+    border-left: none;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &.alone-button {
+      height: 100%;
+      border-left: 1px solid $black-shade-2;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+    .reset-date-range-btn {
+      display: flex;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  &.range-picker-small {
+    .DateRangePicker {
+      height: 32px;
+      .DateRangePickerInput__withBorder {
+        height: 32px;
+        .DateInput {
+          padding: 0 12px;
+          .DateInput_input {
+            padding: 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #0A0B0C;
+            &::placeholder {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+              color: $accent-white-2;
+            }
+          }
+        }
+        .DateRangePickerInput_arrow {
+          img {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .DateInput:last-of-type {
+          padding: 0 24px;
+        }
+      }
+    }
+  }
+
+  &.range-picker-large {
+    .DateRangePicker {
+      height: 40px;
+      .DateRangePickerInput__withBorder {
+        height: 40px;
+        .DateInput {
+          padding: 0 12px;
+          .DateInput_input {
+            padding: 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: #0A0B0C;
+            &::placeholder {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 26px;
+              color: $accent-white-2;
+            }
+          }
+        }
+        .DateRangePickerInput_arrow {
+          img {
+            height: 24px;
+            width: 24px;
+          }
+        }
+        .DateInput:last-of-type {
+          padding: 0 24px;
+        }
+      }
+    }
+  }
+
+  .DateRangePicker {
+    font-size: 16px;
+    color: $black-shade-5;  
+    border-radius: 4px;
+    width: 363px;
+    .DateRangePickerInput {
+      &:focus-within {
+        border: 1px solid $accent-light-green !important;
+        box-shadow: 0px 0px 4px 1px rgba(0, 136, 143, 0.25) !important;
+      } 
+      &__disabled {
+        background-color: $accent-white-1 !important;
+        border: 1px solid $accent-white-1 !important;
+        cursor: not-allowed;
+      }     
+    }
+  }
+
+  .DateRangePickerInput__withBorder {
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid $accent-white-light-300;
+      .DateInput {
+        width: 50%;
+        height: 100%;
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        &_input {
+          border-bottom: none;
+          font-size: 16px;
+          background-color: transparent;
+          font-style: normal;
+          color: $black-shade-5;
+          &__disabled {
+            cursor: not-allowed;
+          }
+        svg {
+          top: 48px !important;
+        }
+      }
+      .DateRangePickerInput_arrow {
+        width: 1rem;
+        height: 1rem;
+        display: inline-flex;
+        &_svg {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+      .CalendarMonth_table {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  &.--reset {
+    .DateRangePickerInput__withBorder {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+   }
+  }
+}

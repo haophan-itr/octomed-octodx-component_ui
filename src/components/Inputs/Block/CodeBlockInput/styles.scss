@@ -1,0 +1,57 @@
+@import '../../../../styles/variables';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.code-block-input{
+  background-color: $accent-white-light-600;
+  border: 1px solid $accent-white-light-300;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  &:focus {
+    border: 1px solid $accent-light-green;
+    box-shadow: 0px 0px 4px 1px rgba(0, 136, 143, 0.25) !important;
+  }
+  &.code-block-large {
+    height: 48px;
+    width: 40px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $black-shade-5;
+    &::placeholder {
+      height: 80%;
+      position: absolute;
+      width: 100%;
+      top: 5px;
+      color: $accent-white-2;
+    }
+  }
+  &.code-block-small {
+    height: 40px;
+    width: 32px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $black-shade-5;
+    &::placeholder {
+      height: 80%;
+      position: absolute;
+      width: 100%;
+      top: 5px;
+      color: $accent-white-2;
+    }
+  }
+  &.--disabled {
+    background-color: $accent-white-1;
+    border: 1px solid $accent-white-1;
+    cursor: not-allowed;
+  }
+}
+

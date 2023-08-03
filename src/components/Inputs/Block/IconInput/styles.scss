@@ -1,0 +1,139 @@
+@import "../../../../styles/variables";
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.custom-icon-input {
+  background-color: $accent-white-light-600;
+  border: 1px solid $accent-white-light-300;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 14px;
+  padding-right: calc(14px + 20px + 6px);
+  outline: none;
+
+  &:focus {
+    border: 1px solid $accent-light-green;
+    box-shadow: 0px 0px 4px 1px rgba(0, 136, 143, 0.25) !important;
+  }
+
+  &.input-icons-small {
+    height: 32px;
+    min-width: 150px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $black-shade-5;
+
+    &::placeholder {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $accent-white-2;
+    }
+  }
+
+  &.input-icons-large {
+    height: 40px;
+    min-width: 150px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $black-shade-5;
+
+    &::placeholder {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: $accent-white-2;
+    }
+  }
+
+  &.--disabled {
+    background-color: $accent-white-1;
+    border: 1px solid $accent-white-1;
+    cursor: not-allowed;
+  }
+}
+
+.input-icons-container {
+  position: relative;
+
+  &.--is-large {
+    .icon {
+      img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+
+  &.--is-small {
+    .icon {
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+
+    transform: translateY(-50%);
+    top: 50%;
+    right: 10px;
+
+    user-select: none;
+
+    &.--disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.main-input-container {
+  width: 100%;
+
+  &.--error {
+    .custom-icon-input {
+      background: #ffe6e9;
+      border: 1px solid #ef2641;
+
+      &:hover {
+        border: 1px solid #f56c7e;
+      }
+
+      &:focus {
+        border: 1px solid #f56c7e;
+        box-shadow: 0px 0px 0px 3px #ffdbe0 !important;
+        background: #fff;
+      }
+    }
+
+    .error-message {
+      &.error-large {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #ef2641;
+      }
+
+      &.error-small {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #ef2641;
+      }
+    }
+  }
+}

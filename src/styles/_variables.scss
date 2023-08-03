@@ -1,0 +1,222 @@
+// @font-face {
+//   font-family: OpenSans;
+//   src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+// }
+
+// @font-face {
+//   font-family: OpenSans;
+//   src: url('./font/OpenSans-Regular.ttf');
+// }
+
+// * {
+//   font-family: OpenSans, sans-serif;
+// }
+// Bootstrap overrides
+
+//
+// Color system
+//
+
+$white:                           #fff;
+$gray-100:                        #f0f3f5;
+$gray-200:                        #c2cfd6;
+$gray-300:                        #a4b7c1;
+$gray-400:                        #869fac;
+$gray-500:                        #678898;
+$gray-600:                        #536c79;
+$gray-700:                        #3e515b;
+$gray-800:                        #29363d;
+$gray-900:                        #151b1e;
+$black:                           #000 !default;
+$white-light:                     #E1F5F5;
+$white-light-grey:                #f2f2f2;
+
+$blue:                            #20a8d8;
+$indigo:                          #6610f2 !default;
+$purple:                          #6f42c1 !default;
+$pink:                            #e83e8c !default;
+$red:                             #ff5454;
+$orange:                          #fabb3d;
+$yellow:                          #ffc107 !default;
+$green:                           #79c447;
+$teal:                            #20c997 !default;
+$cyan:                            #67c2ef;
+$green-blue:                      #19A3AD;
+$blue-ocean:                      #4D92DF;
+$black-shade-1:                   #4b5b73;
+$black-shade-2:                   #828c99;
+$black-shade-3:                   #c6cbd1;
+$black-shade-4:                   #dce1e6;
+$primary-faded:                   #edf9fa;
+$primary-tint:                    #0d9e92;
+$primary-tint-2:                  #36a3ad;
+
+
+$colors: (
+  blue:                           $blue,
+  indigo:                         $indigo,
+  purple:                         $purple,
+  pink:                           $pink,
+  red:                            $red,
+  orange:                         $orange,
+  yellow:                         $yellow,
+  green:                          $green,
+  teal:                           $teal,
+  cyan:                           $cyan,
+  white:                          $white,
+  gray:                           $gray-600,
+  gray-dark:                      $gray-800
+);
+
+$theme-colors: (
+  primary:                        $blue-ocean,
+  secondary:                      $green-blue,
+  success:                        $green,
+  info:                           $cyan,
+  warning:                        $orange,
+  danger:                         $red,
+  light:                          $gray-100,
+  dark:                           $gray-800
+);
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-transitions:              true;
+$enable-rounded:                  false;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                         #FFFFFF;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-size-base:                  0.875rem;
+
+// Breadcrumbs
+
+$breadcrumb-bg:                   #fff;
+$breadcrumb-margin-bottom:        1.5rem;
+
+// Cards
+
+$card-border-color:               $gray-200;
+$card-cap-bg:                     $gray-100;
+
+// Dropdowns
+
+$dropdown-padding-y:              0;
+$dropdown-border-color:           $gray-200;
+$dropdown-divider-bg:             $gray-100;
+
+// Buttons
+
+$btn-secondary-border:            $gray-300;
+
+// Progress bars
+
+$progress-bg:                     $gray-100;
+
+// Tables
+
+$table-bg-accent:                 $gray-100;
+$table-bg-hover:                  $gray-100;
+
+// Forms
+
+$input-group-addon-bg:            $gray-100;
+$input-border-color:              $gray-200;
+$input-group-addon-border-color:  $gray-200;
+
+$primary-dark: #00828a;
+$primary-base: #00a3ad;
+$primary-shade-1: #7fd0d5;
+$primary-shade-2: #ccedef;
+$primary-faded: #edf9fa;
+
+$red-base: #EF2641;
+$red-base-1: #F56C7E;
+$red-base-2: #FFDBE0;
+$red-base-3: #FFADB8;
+$blue-100: #ebf3ff;
+$blue-500: #0954ba;
+$blue-1: #DCFAE6;
+$primary-tint: #0d9e92;
+$accent-green: #82DDE0;
+$accent-green-1: #94E0DB;
+$accent-greeen-2: #0AAE43;
+$accent-green-100: #eefbf1;
+$accent-green-200: #016A70;
+$accent-green-500: #00b268;
+$accent-green-dark: #27804d;
+$accent-negative: #ff5a5f;
+$accent-red-100: #fff3f0;
+$accent-red-500: #f23d42;
+$accent-red-600: #EF2641;
+$accent-yellow: #fcca46;
+$accent-orange: #ffab00;
+$accent-orange-light: #F09030;
+$accent-dark-orange: #fa7921;
+$accent-dark-orange-100: #fff6f0;
+$accent-dark-orange-500: #eb6d17;
+$accent-light-green: #00888F;
+$accent-light-green-200: #008DA1;
+$accent-blue-100: #0F7AE6;
+$accent-blue-200: #0B5CAD;
+$accent-blue-300: #9FCCF9;
+$accent-black: #1B1B1E;
+$accent-blue-light-100: #49494F;
+$accent-blue-light-200: #6B6B75;
+$accent-white: #FFE5E9;
+$accent-white-1: #D4D4D9;
+$accent-white-2: #9F9FA7;
+$accent-blue-light: #0F7AE6;
+$accent-black: #1B1B1E;
+$accent-blue-light-100: #49494F;
+$accent-blue-light-200: #6B6B75;
+$accent-white-light-100: #ebf6f7;
+$accent-white-light-300: #E9E9EC;
+$accent-white-light-400: #E9E9EC;
+$accent-white-light-500: #D9EBFD;
+$accent-white-light-600: #F7F9F9;
+$accent-white-light-700: #FFE6E9;
+$accent-white-light-800: #D4D4D9;
+$accent-white-light-900: #F4F4F6;
+
+$gradient-blue: linear-gradient(153.43deg, #1F83CC 31.68%, #169DB8 83.33%);
+
+$black-rich: #1d2f47;
+$black-shade-1: #4b5b73;
+$black-shade-2: #828c99;
+$black-shade-3: #c6cbd1;
+$black-shade-4: #dce1e6;
+$black-shade-5: #0A0B0C;
+$black-faded: #f5f7fa;
+$black-faded-1: #F4F4F6;
+$blue-dark: #094786;
+$white: #ffffff;
+
+$gradient-dark: linear-gradient(180.37deg, #0d9e92 0%, #00828a 64.62%);
+$gradient-primary: linear-gradient(135deg, #17b9ab 0%, #00a3ad 70.31%);
+$gradient-hover: linear-gradient(158.92deg, #00a3ad 0%, #00828a 70.31%);
+$gradient-negative: linear-gradient(135deg, #ff7896 0%, #ff5a5f 70.31%);
+
+$shadow-high: 0px 6px 12px rgba(29, 47, 71, 0.06);
+$tooltip-header-shadow: 0px 1px 6px rgba(29, 47, 71, 0.1);
+$table-row-hover-shadow: 0px 1px 4px rgba(29, 47, 71, 0.12);
+
+$focus-red: 0px 0px 0px 2px #ffc9ca;
+$focus-green: 0px 0px 0px 2px #7fd0d5;
+
+$opacity-black-25: rgba(0,0,0, 0.25);
+$opacity-black-85: rgba(0,0,0, 0.85);
+$opacity-black-2: rgba(0,0,0, 0.2);
+$opacity-black-14: rgba(0,0,0, 0.14);
+$opacity-black-12: rgba(0,0,0, 0.12);
+$opacity-grey: rgba(255, 255, 255, 0.25);
+$opacity-blue: rgba(54, 163, 173, 0.15);

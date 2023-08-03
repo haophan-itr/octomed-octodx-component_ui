@@ -1,0 +1,15 @@
+@import '../../../../styles/variables';
+
+.switch-text-left-input {
+  .input-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .title-toggle-input {
+    font-size: 14px;
+    color: $black-shade-5;
+    margin-right: 12px;
+    font-family: 'Open Sans', sans-serif;
+  }
+}

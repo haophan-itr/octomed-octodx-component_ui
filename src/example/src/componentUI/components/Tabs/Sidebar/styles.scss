@@ -1,0 +1,336 @@
+@import '../../../styles/variables';
+
+* {
+  font-family: OpenSans, sans-serif;
+}
+
+@mixin sidebar-tab ($height, $width) {
+  width: $width;
+  height: $height;
+  text-decoration: none;
+  display: block;
+  opacity: 0.75;
+  margin: 0 auto;
+  transition: 0.5s;
+  // padding: 0.9rem 0.8rem;
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  &:hover {
+    border-radius: 8px;
+    background-color: $opacity-black-25;
+  }
+}
+
+@mixin sidebar-content-tab($width, $f-content) {
+  display: flex;
+  justify-content: $f-content;
+  align-items: center;
+  width: $width;
+  height: 100%;
+  &__name {
+    line-height: 0.9375rem;
+    text-align: center;
+    color: $white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 0.7rem;
+  }
+
+  .busy {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background: $accent-yellow;
+      border-radius: 50%;
+    }
+  }
+}
+
+@mixin btn-collapse($mr) {
+  font-weight: 400;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: $white;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  img {
+    height: 20px;
+    width: 20px;
+    margin-right: $mr;
+  }
+
+  .focus,
+  &:focus {
+    box-shadow: unset;
+  }
+
+  .active,
+  &:active {
+    background-color: unset;
+    border: unset;
+  }
+
+  .active {
+    &:focus {
+      box-shadow: unset;
+    }
+  }
+
+  &:active:focus {
+    box-shadow: unset;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.custom-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 204px;
+  background: $gradient-blue;
+  padding: 0;
+  transition: 0.5s;
+  position: fixed;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo-container {
+      width: 100%;
+      height: 4rem;
+      padding: 1rem;
+      border-bottom: 1px solid $opacity-grey;
+
+      .logo {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../static/images/support-portal-logo-sidebar.svg");
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+    }
+
+    .menu-icon-container {
+      width: 100%;
+      margin-top: 1.25rem;
+      padding: 0 0.5rem;
+
+      .sidebar-tab {
+        @include sidebar-tab(48px, auto);
+
+        .sidebar-tab-content {
+          @include sidebar-content-tab(164px, flex-start);
+          img {
+            margin-left: 0.75rem;
+          }
+          &-small {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+          }
+        }
+
+        &.active {
+          border-radius: 8px;
+          background-color: $opacity-black-25;
+          opacity: unset;
+          .sidebar-tab-content {
+            .sidebar-tab-content__name {
+              font-weight: 600;
+              opacity: 1;
+            }
+            > img,
+            > div > img {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .sidebar-tab-small {
+        @include sidebar-tab(48px, 48px);
+
+        .sidebar-tab-content-small {
+          @include sidebar-content-tab(100%, center);
+          span {
+            display: none;
+          }
+        }
+
+        &.active {
+          border-radius: 8px;
+          background-color: $opacity-black-25;
+          opacity: unset;
+          .sidebar-tab-content {
+            .sidebar-tab-content__name {
+              font-weight: 600;
+              opacity: 1;
+            }
+
+            > img,
+            > div > img {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+
+    .collapse-btn {
+      display: flex;
+      margin-bottom: 1rem;
+      padding: 0 1.25rem;
+
+      .collapse-menu {
+        @include btn-collapse(0.75rem);
+      }
+
+      .collapse-menu-hide {
+        display: none;
+      }
+
+      .extend-menu {
+        @include btn-collapse(0);
+      }
+    }
+
+    .avt-user {
+      font-style: normal;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: $accent-light-green-200;
+      padding: 12px 15px;
+
+      img {
+        height: 32px;
+        width: 32px;
+        margin-right: 0.5rem;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0;
+        color: $white;
+        flex: 1;
+        white-space: pre;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &.--collapse {
+    width: 4rem;
+
+    + #container-main-page {
+      margin-left: 4rem;
+    }
+  }
+}
+
+@keyframes marginRightAvatar {
+  from {
+    margin-right: 0.5rem;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+
+@keyframes marginRightAvatarReverse {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 0.5rem;
+  }
+}
+
+@keyframes marginRightCollapseIcon {
+  from {
+    margin-right: 0.75rem;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+
+@keyframes marginRightCollapseIconReverse {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 0.75rem;
+  }
+}
+
+@keyframes rotateCollapseIcon {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateCollapseIconReverse {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes opacityReverse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sidebarTabWidth {
+  from {
+    width: auto;
+  }
+  to {
+    width: 4rem;
+  }
+}

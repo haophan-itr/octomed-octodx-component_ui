@@ -1,0 +1,123 @@
+@import '../../../../styles/variables';
+
+.toggle-input {
+  display: flex;
+  align-items: center;
+  &.text-left {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    .text-label {
+      &.large,
+      &.small {
+        padding-top: 0;
+      }
+    }
+  }
+  .icon-toggle {
+    &.large {
+      .react-switch-checkbox {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      }
+      
+      .react-switch-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+      
+        width: 40px;
+        height: 24px;
+      
+        background: $accent-white-1;
+        border-radius: 12px;
+        position: relative;
+        transition: background-color .2s;
+        margin-top: -20px;
+      }
+      
+      .react-switch-label .react-switch-button {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        border-radius: 12px;
+        transition: 0.2s;
+        background: $white;
+      }
+      
+      .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+        left: calc(100% - 2px);
+        transform: translateX(-100%);
+      }
+      
+      .react-switch-label:active .react-switch-button {
+        width: 20px;
+      }
+    }
+    &.small {
+      .react-switch-checkbox {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      }
+      
+      .react-switch-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+      
+        width: 30px;
+        height: 18px;
+      
+        background: $accent-white-1;
+        border-radius: 12px;
+        position: relative;
+        transition: background-color .2s;
+        margin-top: -20px;
+      }
+      
+      .react-switch-label .react-switch-button {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 14px;
+        height: 14px;
+        border-radius: 12px;
+        transition: 0.2s;
+        background: $white;
+      }
+      
+      .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+        left: calc(100% - 2px);
+        transform: translateX(-100%);
+      }
+      
+      .react-switch-label:active .react-switch-button {
+        width: 20px;
+      }
+    }
+  }
+  .text-label {
+    margin: 0 12px 0 12px;
+    height: 100%;
+    font-style: normal;
+    font-weight: 400;
+    color: #0A0B0C;
+    &.large {
+      line-height: 26px;
+      font-size: 16px;
+      padding-top: 5px;
+    }
+    &.small {
+      line-height: 22px;
+      font-size: 14px;
+      padding-top: 2px;
+    }
+  }
+}

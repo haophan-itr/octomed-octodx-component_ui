@@ -1,0 +1,147 @@
+@import '../../../../styles/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin picker-border-less {
+  width: 100%;
+  background-color: $accent-white-light-600 !important;
+  border: 1px solid $accent-white-light-300 !important;
+  border-radius: 4px;
+  .ant-picker-clear {
+    right: 35px;
+  }
+  &:hover {
+    .ant-picker-clear {
+      right: 35px;
+    }
+  }
+  &.ant-picker-disabled {
+    background-color: $accent-white-light-300 !important;
+    border: 1px solid $accent-white-1 !important;
+    cursor: not-allowed;    
+
+    input {
+      background-color: $accent-white-light-300 !important;      
+    }
+  }
+
+  &.ant-picker-focused {
+    border: 1px solid $accent-light-green !important;
+    box-shadow: 0px 0px 4px 1px rgba(0, 136, 143, 0.25) !important;
+    background-color: $accent-white-light-600 !important;     
+  }
+}
+
+@mixin picker-focus {
+  border: 1px solid $accent-light-green !important;
+  box-shadow: 0px 0px 4px 1px rgba(0, 136, 143, 0.25) !important;
+  background-color: $accent-white-light-600 !important;
+  .ant-picker-input {
+    .ant-picker-clear {
+      right: 35px;
+    }
+  }
+}
+
+.custom-date-picker-input {
+  width: 100%;
+  &.date-picker-large {
+    .custom-date-picker-input__label {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: #0A0B0C;
+    }
+    .custom-date-picker-input__calendar-picker {
+      .ant-picker-input {
+        input {
+          border: none;
+          outline: none;
+          color: $black-shade-5;
+          font-size: 16px;
+          background-color: $accent-white-light-600;
+          ::placeholder {
+            font-style: normal;
+            font-weight: normal;
+            color: $accent-white-2;
+            font-size: 16px;
+          }
+        }
+      }
+      &.ant-picker.ant-picker-borderless {
+        @include picker-border-less();
+      }
+  
+      &.ant-picker-focused {
+        @include picker-focus();
+      }
+  
+      &.--error {
+        border-color: $accent-negative;
+      }
+    }
+  }
+  &.date-picker-small {
+    width: 100%;
+    .custom-date-picker-input__label {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      color: #0A0B0C;
+    }
+    .custom-date-picker-input__calendar-picker {
+      .ant-picker-input {
+         input {
+          border: none;
+          outline: none;
+          color: $black-shade-5;
+          font-size: 14px;
+          background-color: $accent-white-light-600;
+          ::placeholder {
+            font-style: normal;
+            font-weight: normal;
+            color: $accent-white-2;
+            font-size: 14px;
+          }
+        }
+      }
+      &.ant-picker.ant-picker-borderless {
+        @include picker-border-less();
+      }
+  
+      &.ant-picker-focused {
+        @include picker-focus(); 
+      }
+  
+      &.--error {
+        border-color: $accent-negative;
+      }
+    }
+  }
+  &__label {
+    color: $black-rich;
+    margin-bottom: 0.25rem;
+  }
+
+  &__error-message {
+    height: 1.125rem;
+    color: $accent-negative;
+    font-size: 14px;
+    margin-top: 0.25rem;
+  }
+
+  &__warning-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__warning-message {
+    color: $accent-dark-orange;
+    font-size: 14px;
+  }
+}
+

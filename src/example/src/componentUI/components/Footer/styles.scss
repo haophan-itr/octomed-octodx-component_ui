@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+
+* {
+  font-family: OpenSans, sans-serif;
+}
+
+.app-footer-elements {
+  height: 56px;
+  margin-left: 204px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: $accent-blue-light-100;
+  padding: 0 2rem;
+  background: $accent-white-light-600;
+  transition: 0.5s;
+  &.--collapse-footer {
+    margin-left: 4rem;
+  }
+  p {
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 0;
+    &.hide-text {
+      visibility: hidden;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '../../../styles/variables';
+
+html {
+  font-size: 16px;
+
+  > * {
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+.toggle-button {
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $accent-white-2;
+  background-color: $white;
+  border: 1px solid $accent-white-1;
+  border-radius: 4px;
+  outline: none;
+  padding: 0 12px;
+  white-space: pre;
+  &:hover {
+    color: $accent-white-2;
+    background-color: $accent-white-light-600;
+  }
+
+  &:disabled {
+    color: $black-shade-2;
+    background-color: $white;
+    cursor: not-allowed;
+  }
+
+  &.--active {
+    color: $white;
+    background-color: $accent-light-green;
+    border: none;
+    &:hover {
+      background: $accent-green-200;
+    }
+    &:focus {
+      background-color: $accent-light-green;
+      box-shadow: 0px 0px 0px 3px $accent-green;
+      &:hover {
+        background-color: $accent-green-200;
+      }
+    }
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}

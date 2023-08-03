@@ -1,0 +1,120 @@
+@import '../../../styles/variables';
+
+* {
+  font-family: 'Open Sans',sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin css-toggle($height, $bgColor, $padding) {
+  height: $height;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  outline: none !important;
+  padding: $padding;
+  color: $accent-blue-light-200;
+  background-color:$bgColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: $white-light;
+    font-weight: 600;
+    .custom-badge-num {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 21px;
+      &.c-red {
+        background-color: $accent-light-green;
+        color: $white-light;
+      }
+    }
+    span {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      color: $accent-green-200;
+    }
+    
+  }
+
+  &:disabled {
+    color: $accent-blue-light-200;
+    cursor: not-allowed;
+  }
+
+  &.--active {
+    background: $white-light;
+    font-weight: 600;
+    color: $accent-green-200;
+    &:disabled {
+      opacity: 0.5;
+    }
+    .custom-badge-num {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 21px;
+      &.c-red {
+        background-color: $accent-light-green;
+        color: $white;
+      }
+    }
+  }
+
+  .custom-badge-num {
+    height: 20px;
+    min-width: 30px;
+    border-radius: 16px;
+    padding: 0px 8px;
+    margin-left: 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    &.c-red {
+      background-color: $white-light;
+      color: $accent-green-200;
+    }
+  }
+}
+
+.container-toggle-tab {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  &__inline {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid $accent-white-light-300;
+    height: 41px;
+    width: 100%;
+    .toggle-tab {
+      @include css-toggle(100%, transparent, 10px 16px);
+    }
+    button:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+    button:last-child {
+      border-radius: 0px 8px 8px 0;
+    }
+  }
+  &__vertical {
+    display: flex;
+    flex-direction: column;
+    .toggle-tab {
+      &.tab-large {
+        @include css-toggle(40px, $white, 10px 16px);
+      }
+      &.tab-small {
+        @include css-toggle(32px, $white, 6px 16px);
+      }
+    }
+  }
+}

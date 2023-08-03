@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.custom-autocomplete-input {
+  &.--disabled {
+    cursor: not-allowed;
+    background: transparent;
+  }
+  .auto-small {
+    &__control {
+      height: 32px;
+      width: 100%;
+    }
+    &__value-container {
+      > div {
+        visibility: visible;
+      }
+    }
+  }
+  .auto-large {
+    &__control {
+      height: 40px;
+      width: 100%;
+    }
+    &__value-container {
+      > div {
+        visibility: visible;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.time-progress {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.duration-progress-bar {
+  height: 0.5rem;
+  margin-top: 0.25rem;
+
+  .progress-bar {
+    background-color: $accent-green-500;
+  }
+
+  &.progress-blue {
+    .progress-bar {
+      background-color: $blue-500;
+    }
+  }
+}

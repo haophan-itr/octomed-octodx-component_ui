@@ -1,0 +1,186 @@
+@import '../../../../styles/variables';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.custom-checkbox {
+  &.check-box-large {
+    .ant-checkbox-group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .ant-checkbox-wrapper {
+        height: 40px;
+        min-width: 240px;
+        background: $accent-white-light-600;
+        border-radius: 4px;
+        margin: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 12px;
+        &:hover {
+          .ant-checkbox {
+            .ant-checkbox-inner {
+              border: 1px solid $accent-light-green;
+            }
+          }
+        }
+        .ant-checkbox {
+          position: relative;
+          top: 0;
+          .ant-checkbox-input {
+            &:focus {
+              + .ant-checkbox-inner {
+                border: 1px solid $accent-light-green;
+              }
+            }
+          }
+        }
+        span:nth-of-type(2) {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+          color: $black-shade-5;
+          padding: 0;
+          margin-left: 12px;
+        }
+        &.ant-checkbox-wrapper-checked {
+          background: $white-light;
+          .ant-checkbox-checked {
+            .ant-checkbox-input {
+              border: 1px solid $accent-light-green;
+            }
+            .ant-checkbox-inner {
+              background-color: $accent-light-green;
+              border-color: $accent-light-green;
+              &::after {
+                transform: rotate(45deg) scale(1) translate(-65%, -55%);
+              }
+            }
+            &::after {
+              border: 1px solid $accent-light-green;
+            }
+          }
+          &:hover {
+            .ant-checkbox-checked {
+              &::after {
+                border-color: $accent-light-green;
+              }
+            }
+          }
+          &.ant-checkbox-wrapper-disabled {
+            .ant-checkbox-disabled {
+              .ant-checkbox-inner {
+                border: 1px solid $accent-green-1 !important;
+                background: $accent-green-1;
+              }
+            }
+          }
+        }
+        &.ant-checkbox-wrapper-disabled {
+          .ant-checkbox-disabled {
+            .ant-checkbox-inner {
+              border: 1px solid $accent-white-light-300 !important;
+              background: $accent-white-light-900;
+              &::after {
+                border-color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.check-box-small {
+    .ant-checkbox-group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .ant-checkbox-wrapper {
+        height: 32px;
+        min-width: 240px;
+        background: $accent-white-light-600;
+        border-radius: 4px;
+        margin: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 8px;
+        &:hover {
+          .ant-checkbox {
+            .ant-checkbox-inner {
+              border: 1px solid $accent-light-green;
+            }
+          }
+        }
+        .ant-checkbox {
+          position: relative;
+          top: 0;
+          .ant-checkbox-input {
+            &:focus {
+              + .ant-checkbox-inner {
+                border: 1px solid $accent-light-green;
+              }
+            }
+          }
+        }
+        span:nth-of-type(2) {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: $black-shade-5;
+          padding: 0;
+          margin-left: 8px;
+        }
+        &.ant-checkbox-wrapper-checked {
+          background: $white-light;
+          .ant-checkbox-checked {
+            .ant-checkbox-input {
+              border: 1px solid $accent-light-green;
+            }
+            .ant-checkbox-inner {
+              background-color: $accent-light-green;
+              border-color: $accent-light-green;
+              &::after {
+                transform: rotate(45deg) scale(1) translate(-65%, -55%);
+              }
+            }
+            &::after {
+              border: 1px solid $accent-light-green;
+            }
+          }
+          &:hover {
+            .ant-checkbox-checked {
+              &::after {
+                border-color: $accent-light-green;
+              }
+            }
+          }
+          &.ant-checkbox-wrapper-disabled {
+            .ant-checkbox-disabled {
+              .ant-checkbox-inner {
+                border: 1px solid $accent-green-1 !important;
+                background: $accent-green-1;
+              }
+            }
+          }
+        }
+        &.ant-checkbox-wrapper-disabled {
+          .ant-checkbox-disabled {
+            .ant-checkbox-inner {
+              border: 1px solid $accent-white-light-300 !important;
+              background: $accent-white-light-900;
+              &::after {
+                border-color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

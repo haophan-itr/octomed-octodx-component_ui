@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.custom-select-input {
+  &__label {
+    margin-bottom: 0.25rem;
+  }
+  &__margin_12 {
+    margin-bottom: 0.75rem;
+  }
+  &.--disabled {
+    cursor: not-allowed;
+    background: transparent;
+  }
+  .add-btn {
+    .btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: $primary-dark;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+
+      .text {
+        font-size: 0.875rem;
+        margin-left: 0.75rem;
+      }
+    }
+  }
+
+  [class*="-indicatorContainer"] {
+    margin-right: 1rem;
+    padding: 0;
+  }
+
+  &__error-message {
+    color: $accent-negative;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  &__warning-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 0.25rem;
+  }
+
+  &__warning-message {
+    flex: 1;
+    color: $accent-dark-orange;
+    font-size: 0.75rem;
+  }
+
+  &__warning-button {
+    color: $blue-500;
+    font-size: 0.75rem;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    padding: 0;
+  }
+}

@@ -1,0 +1,420 @@
+@import '../../styles/variables';
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin badge ($cl, $bg) {
+  height: 24px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 8px;
+  border: unset;
+  border-radius: 16px;
+  outline: unset;
+  padding: 0px 10px 0 8px;
+  color: $cl;
+  background-color: $bg;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.custom-table-container {
+  &.table-large {
+    .react-bootstrap-table {
+      table {
+        margin-bottom: unset;
+        thead {
+          tr {
+            height: 56px;
+            th {
+              font-size: 14px;
+              color: $black-shade-5;
+              font-weight: 500;
+              text-align: left;
+              border: none;
+              padding: 16px 12px;
+            }
+          }
+        }
+        tbody {
+          tr:last-child {
+            border-bottom: none;
+          }
+          tr {
+            height: 48px;
+            border-top: 1px solid $accent-white-light-300;
+            border-bottom: 1px solid $accent-white-light-300;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: $black-shade-5;
+            &:hover {
+              background-color: #F4F4F6;
+            }
+            &.--have-background-color {
+              td {
+                .btn-edit-rma {
+                  display: block;
+                }
+              }
+            }
+            td {
+              border: none;
+              text-align: left;
+              padding: 13px 12px;
+            }
+            .react-bs-table-no-data {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .react-bootstrap-table-pagination {
+      > div {
+        .custom-size-per-page-btn-dropdown {
+          .dropdown-toggle {
+            min-width: 120px;
+            height: 40px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $accent-blue-light-100;
+            padding: 10px 6px 10px 10px;
+            img {
+              height: 24px;
+              width: 24px;
+              margin-left: 24px;
+            }
+          }
+        }
+      }
+      .custom-pagination-total {
+        color: $accent-black;
+      }
+      .custom-pagination-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        .prev-btn {
+          border: unset;
+          height: 40px;
+          width: 40px;
+          img {
+            height: 24px;
+            width: 24px;
+          }
+          &:hover {
+            background: $white-light;
+            border-radius: 4px;
+          }
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+  
+        .next-btn {
+          border: unset;
+          margin-left: 1rem;
+          height: 40px;
+          width: 40px;
+          img {
+            height: 24px;
+            width: 24px;
+          }
+          &:hover {
+            background: $white-light;
+            border-radius: 4px;
+          }
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+        .pagination-btn {
+          border: unset;
+          height: unset;
+          width: unset;
+          height: 40px;
+          width: 40px;
+          margin-left: 16px;
+          .name {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: $accent-blue-light-100;
+          }
+          padding: 10px 16px;
+           &:focus {
+            box-shadow: unset;
+          }
+          &:hover {
+            background: $white-light;
+            border-radius: 4px;
+          }
+        }
+        .filled-btn {
+          background: $white-light;
+          border-radius: 4px;
+          padding: 10px 16px;
+          height: 40px;
+          width: 40px;
+          .name {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: $accent-light-green;
+          }
+           &:focus {
+            box-shadow: unset;
+          }
+          &:not(:first-child) {
+            margin-left: 1rem;
+          }
+        }
+        .hidden {
+          display: none;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  &.table-small {
+    .react-bootstrap-table {
+      table {
+        margin-bottom: unset;
+        thead {
+          tr {
+            height: 40px;
+            th {
+              font-size: 12px;
+              line-height: 18px;
+              color: $black-shade-5;
+              font-weight: 500;
+              text-align: left;
+              border: none;
+              padding: 11px 12px;
+            }
+          }
+        }
+        tbody {
+          tr:last-child {
+            border-bottom: none;
+          }
+          tr {
+            height: 38px;
+            border-top: 1px solid $accent-white-light-300;
+            border-bottom: 1px solid $accent-white-light-300;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: $black-shade-5;
+            &:hover {
+              background-color: #F4F4F6;
+            }
+            &.--have-background-color {
+              td {
+                .btn-edit-rma {
+                  display: block;
+                }
+              }
+            }
+            td {
+              border: none;
+              text-align: left;
+              padding: 13px 12px;
+            }
+            .react-bs-table-no-data {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .react-bootstrap-table-pagination {
+      > div {
+        .custom-size-per-page-btn-dropdown {
+          .dropdown-toggle {
+            min-width: 120px;
+            height: 32px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $accent-blue-light-100;
+            padding: 6px 6px 6px 10px;
+            img {
+              height: 20px;
+              width: 20px;
+              margin-left: 24px;
+            }
+          }
+        }
+      }
+      .custom-pagination-total {
+        color: $accent-black;
+      }
+      .custom-pagination-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        .prev-btn {
+          border: unset;
+          height: 32px;
+          width: 32px;
+          img {
+            height: 20px;
+            width: 20px;
+          }
+          &:hover {
+            background: $white-light;
+            border-radius: 4px;
+          }
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+  
+        .next-btn {
+          border: unset;
+          margin-left: 1rem;
+          height: 32px;
+          width: 32px;
+          img {
+            height: 20px;
+            width: 20px;
+          }
+          &:hover {
+            background: $white-light;
+            border-radius: 4px;
+          }
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+        .pagination-btn {
+          border: unset;
+          height: unset;
+          width: unset;
+          height: 32px;
+          width: 32px;
+          margin-left: 16px;
+          .name {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: $accent-blue-light-100;
+          }
+          padding: 10px 16px;
+           &:focus {
+            box-shadow: unset;
+          }
+          &:hover {
+            background: $white-light;
+            border-radius: 4px;
+          }
+        }
+        .filled-btn {
+          background: $white-light;
+          border-radius: 4px;
+          padding: 10px 16px;
+          height: 32px;
+          width: 32px;
+          .name {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: $accent-light-green;
+          }
+           &:focus {
+            box-shadow: unset;
+          }
+          &:not(:first-child) {
+            margin-left: 1rem;
+          }
+        }
+        .hidden {
+          display: none;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  .react-bootstrap-table {
+    border: 1px solid $accent-white-light-300;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+  .react-bootstrap-table-pagination {
+    margin-right: unset;
+    margin-left: unset;
+    & > div {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .custom-size-per-page-btn-dropdown {
+      .dropdown-toggle {
+        border: 1px solid $accent-white-light-300;
+        border-radius: 4px;
+        background-color: $white;
+        transition: all 200ms ease-in-out;
+        display: flex;
+        align-items: center;
+        &:focus {
+          box-shadow: 0 0 0 0.2rem $accent-white-light-300;
+          border-radius: 4px;
+        }
+    
+        &:active {
+          color: $accent-blue-light-100;
+          background-color: $white;
+        }
+    
+        &::after {
+          display: none;
+        }
+      }
+    
+      .dropdown-menu {
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+          0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        animation-name: fadeIn;
+        animation-duration: 0.2s;
+        padding: 0;
+        .dropdown-item {
+          background-color: transparent;
+          border-bottom: 1px solid rgba(54, 163, 173, 0.15);
+          outline: none;
+          transition: all 200ms ease-in-out;
+          padding: 10px 20px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          color: $accent-blue-light-100;
+          line-height: 22px;
+          &:hover {
+            background-color: $white-light;
+            transition: background-color 200ms ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

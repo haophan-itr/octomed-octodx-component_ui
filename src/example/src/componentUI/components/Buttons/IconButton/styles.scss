@@ -1,0 +1,26 @@
+html {
+  font-size: 16px;
+
+  > * {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+.icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid #dfe2e3;
+  background-color: transparent;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

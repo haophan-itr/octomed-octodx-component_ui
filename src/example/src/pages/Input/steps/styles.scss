@@ -1,0 +1,12 @@
+.container-step {
+  .steps-component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    .step-child-large,
+    .step-child-small {
+      margin-top: 0;
+    }
+  }
+}

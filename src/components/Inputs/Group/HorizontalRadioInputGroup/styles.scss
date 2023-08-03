@@ -1,0 +1,29 @@
+@import '../../../../styles/variables';
+
+.horizontal-radio-container{
+  .title{
+    font-size: 14px;
+    color: $black-shade-5;
+    margin-bottom: 4px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .input-2 {
+    margin-left: 8px !important;
+  }
+
+  .vertical-radio-input-1 {
+    width: 92px;
+  }
+  
+  .vertical-radio-input-2 {
+    width: 92px;
+    margin-left: 16px;
+  }
+}
+

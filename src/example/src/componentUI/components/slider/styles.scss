@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.custom-slider {
+  .ant-slider {
+    &:hover {
+      .ant-slider-handle {
+        border-color: $white;
+        box-shadow: 0px 1px 6px rgba(159, 159, 167, 0.2);
+      }
+    }
+    .ant-slider-rail {
+      background: $accent-white-light-300;
+    }
+    .ant-slider-track {
+      background: $accent-light-green;
+    }
+    .ant-slider-step {
+
+    }
+    .ant-slider-handle {
+      width: 24px;
+      height: 24px;
+      margin-top: -10px;
+      border: solid 5px $white;
+      background: $accent-light-green;
+      &:hover {
+        border-color: $white;
+        box-shadow: 0px 1px 6px rgba(159, 159, 167, 0.2);
+      }
+      &:focus {
+        box-shadow: 0px 1px 6px rgba(159, 159, 167, 0.2);
+      }
+    }
+  }
+}

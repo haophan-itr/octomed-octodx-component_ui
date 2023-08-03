@@ -1,0 +1,37 @@
+.content-button-negative {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #0A0B0C;
+  }
+  .btn-preview-1,
+  .btn-preview-2,
+  .btn-preview-3,
+  .btn-preview-4 {
+    margin-bottom: 10px;
+    width: fit-content;
+  }
+  .btn-primary-icon-left {
+    margin-bottom: 10px;
+    width: fit-content;
+  }
+  .btn-primary-icon-right {
+    margin-bottom: 10px;
+    width: fit-content;
+  }
+  .btn-primary-only-icon {
+    margin-bottom: 10px;
+  }
+  .only-icon {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,360 @@
+@import '../../../../styles/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.dropzone-input-container {
+  width: 500px;
+  .drop-enter {
+    width: 500px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $white-light;
+    border: 2px dashed $accent-light-green;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 1px rgba(0, 136, 143, 0.25);
+    border-radius: 4px;
+  }
+
+  .drop-leave {
+    width: 500px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $accent-white-light-600;
+    border: 2px dashed $accent-white-light-300;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  .line-1 {
+    color: $accent-black;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .line-2 {
+    color: $accent-blue-light-100;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .ant-upload {
+    width: 500px;
+    height: 100px;
+
+    &.ant-upload-btn {
+      padding: 0;
+    }
+
+    .ant-upload-drag-container {
+      .drop-enter {
+        width: 100%;
+      }
+
+      .drop-leave {
+        width: 100%;
+      }
+    }
+
+    &.ant-upload-drag {
+      border: none;
+    }
+  }
+
+  .upload-list-box {
+    width: 500px;
+    background-color: white;
+    border: 1px solid $accent-white-light-300;
+    box-sizing: border-box;
+    border-radius: 4px;
+    // *: Multiple files
+    .upload-list-item {
+      display: flex;
+
+      .box-done {
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 24px;
+        .file-content {
+          height: 48px;
+          width: 420px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .file-name {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $black-shade-5;
+          }
+          .file-size {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: $accent-blue-light-100;
+          }
+        }
+        .remove-btn {
+          margin: 0;
+        }
+      }
+
+      .box-uploading {
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+
+        .file-content {
+          .above-content {
+            height: 22px;
+            width: 408px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            .left-box {
+              display: flex;
+              align-items: center;
+              margin-top: 14px;
+              margin-left: 16px;
+
+              .file-name {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 26px;
+              }
+
+              .dot {
+                width: 3px;
+                height: 3px;
+                background-color: $accent-blue-light-200;
+                border-radius: 50%;
+                margin-left: 4px;
+                margin-right: 4px;
+              }
+
+              .file-size {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: $accent-blue-light-100;
+              }
+            }
+
+            .percent {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+              color: $accent-blue-light-100;
+
+              margin-top: 16px;
+              margin-right: 14px;
+            }
+          }
+          .progess-bar {
+            height: 4px;
+            width: 408px;
+
+            margin-top: 10px;
+
+            .ant-progress-bg {
+              background-color: $accent-greeen-2;
+            }
+
+            .ant-progress-text {
+              display: none;
+            }
+
+          }
+        }
+      }
+
+      // .file-name {
+      //   font-style: normal;
+      //   font-weight: 500;
+      //   font-size: 16px;
+      //   line-height: 26px;
+      // }
+
+      // .remove-btn {
+      //   width: 40px;
+      //   margin: 12px;
+      // }
+    }
+
+
+    // *: Single file
+    .single-upload-box {
+      width: 100%;
+      height: 100%;
+      background-color: $accent-white-light-600;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 20px 24px;
+      .box-done {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        .file-content {
+          display: flex;
+          flex-direction: column;
+          .file-name {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $black-shade-5;
+          }
+  
+          .file-size {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: $accent-blue-light-100;
+          }          
+        } 
+        .remove-btn {
+          margin: 0px;
+          height: 40px;
+          width: 40px;
+          border-radius: 8px;
+          img {
+            height: 24px;
+            width: 24px;
+          }
+          &:focus {
+            background: #FFE6E9;
+          }
+        }   
+      }
+
+      .box-uploading {
+        .above-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0 24px;
+
+          .text-uploading {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: $black-shade-5;
+            margin-top: 16px;
+          }
+
+          .cancel-btn {
+            .name {
+              color: $red-base;
+            }
+            padding-right: 0px;
+            padding-top: 16px;
+
+
+          }
+        }
+
+        .ant-progress {
+          display: flex;
+          align-items: center;
+
+          .ant-progress-text {
+            display: none;
+          }
+
+          .ant-progress-bg {
+            background-color: $accent-greeen-2;
+          }
+
+          .ant-progress-outer {
+            .ant-progress-inner {
+              width: 452px;
+              height: 4px;
+            }
+            margin-left: 24px;
+          }
+        }
+
+        .progess-bar-x {
+          width: 452px;
+          height: 4px;
+
+          .ant-progress-bg {
+            background-color: $accent-greeen-2;
+          }
+        }
+
+        .below-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0 24px;
+
+          .left-side {
+            display: flex;
+            align-items: center;
+
+            .file-name {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 18px;  
+              color: $accent-blue-light-100;            
+            }
+
+            .dot {
+              width: 3px;
+              height: 3px;
+              background-color: $accent-blue-light-200;
+              border-radius: 50%;
+              margin-left: 4px;
+              margin-right: 4px;
+            }
+
+            .file-size {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 18px;
+              color: $accent-blue-light-100;
+            }
+          }
+
+          .percent {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: $accent-blue-light-100;
+          }
+        }
+      }
+    }
+  }
+}
+

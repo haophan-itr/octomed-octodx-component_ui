@@ -1,0 +1,89 @@
+@import '../../styles/variables';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.overlay-tooltip-custom {
+  opacity: 1;
+  .ant-tooltip-content {
+    box-shadow: 0px 6px 12px rgba(159, 159, 167, 0.2);
+    border-radius: 4px;
+    .ant-tooltip-inner {
+      background: $accent-blue-light-100;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $white;
+    }
+  }
+  &.ant-tooltip-placement-topLeft,
+  &.ant-tooltip-placement-topRight,
+  &.ant-tooltip-placement-top {
+    .ant-tooltip-arrow {
+      .ant-tooltip-arrow-content {
+        background: $accent-blue-light-100;
+        position: absolute;
+        top: -5px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  &.ant-tooltip-placement-bottomLeft,
+  &.ant-tooltip-placement-bottomRight,
+  &.ant-tooltip-placement-bottom {
+    .ant-tooltip-arrow {
+      .ant-tooltip-arrow-content {
+        background: $accent-blue-light-100;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: -5px;
+        left: 0;
+        display: block;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  &.ant-tooltip-placement-leftTop,
+  &.ant-tooltip-placement-leftBottom,
+  &.ant-tooltip-placement-left {
+    .ant-tooltip-arrow {
+      .ant-tooltip-arrow-content {
+        background: $accent-blue-light-100;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: -5px;
+        display: block;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  &.ant-tooltip-placement-rightTop,
+  &.ant-tooltip-placement-rightBottom,
+  &.ant-tooltip-placement-right {
+    .ant-tooltip-arrow {
+      .ant-tooltip-arrow-content {
+        background: $accent-blue-light-100;
+        position: absolute;
+        top: 0;
+        right: -5px;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

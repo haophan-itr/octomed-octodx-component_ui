@@ -1,0 +1,59 @@
+@import '../../../styles/variables';
+
+* {
+  font-family: OpenSans, sans-serif;
+}
+
+.btn-dropdown-custom {
+  .dropdown-toggle {
+    border: 1px solid $accent-white-light-300;
+    border-radius: 4px;
+    padding: 0.5rem 0.5rem;
+    color: $accent-blue-light-100;
+    background-color: $white;
+    transition: all 200ms ease-in-out;
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    img {
+      height: 1rem;
+      margin-left: 1rem;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $accent-white-light-300;
+      border-radius: 4px;
+    }
+
+    &:active {
+      color: $accent-blue-light-100;
+      background-color: $white;
+    }
+
+    &::after {
+      // margin-left: 1rem;
+      display: none;
+    }
+  }
+
+  .dropdown-menu {
+    box-shadow: 0px 1px 5px 0px $opacity-black-2, 0px 2px 2px 0px $opacity-black-14,
+      0px 3px 1px -2px $opacity-black-12;
+    border-radius: 4px;
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+
+    .dropdown-item {
+      background-color: transparent;
+      color: $accent-blue-light-100;
+      border-bottom: 1px solid $opacity-blue;
+      outline: none;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        background-color: $accent-white-light-100 !important;
+        transition: background-color 200ms ease-in-out;
+      }
+    }
+  }
+}

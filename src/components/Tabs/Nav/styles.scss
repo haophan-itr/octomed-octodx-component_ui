@@ -1,0 +1,227 @@
+@import '../../../styles/variables';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin  css-badge-num ($height, $lHeight, $fSize, $bgColor, $fColor) {
+  .custom-badge-num {
+    height: $height;
+    border-radius: 16px;
+    padding: 0 8px;
+    margin-left: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $fSize;
+    line-height: $lHeight;
+    &.c-red {
+      background-color: $bgColor;
+      color: $fColor;
+    }
+  }
+}
+
+@mixin css-badge-text ($height, $lHeight, $fSize, $bgColor, $fColor) {
+  .custom-badge-text {
+    height: $height;
+    border-radius: 16px;
+    padding: 0 8px;
+    margin-left: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $fSize;
+    line-height: $lHeight;
+    &.c-red {
+      background-color: $bgColor;
+      color: $fColor;
+    }
+  }
+}
+
+.top-nav-tabs {
+  height: 100%;
+  border-bottom: none;
+  font-style: normal;
+  &.nav-bar-large {
+    font-size: 16px;
+    line-height: 26px;
+    .nav-item {
+      .nav-link {
+        border: none;
+        border-bottom: 2px solid transparent;
+        position: relative;
+        font-weight: 500;
+        color: $accent-blue-light-100;
+        border-radius: 0;
+        padding:0 0 12px 0;
+        .line-tab {
+          display: block;
+          width: 100%;
+          height: 3px;
+          background: $white;
+          border-radius: 2px 2px 0 0;
+          position: relative;
+          top: 16px;
+        }
+        @include css-badge-num(24px, 26px, 12px, #E1F5F5, #00888F);
+        @include css-badge-text(24px, 26px, 12px, #E1F5F5, #00888F);
+        &.active {
+          border: none;
+          border-bottom: 2px solid transparent;
+          position: relative;
+          font-weight: 600;
+          color: $accent-blue-light-100;
+          border-radius: 0;
+          padding:0 0 12px 0;
+          .line-tab {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: $accent-light-green;
+            border-radius: 2px 2px 0 0;
+            position: relative;
+            top: 16px;
+          }
+          @include css-badge-num(24px, 26px, 12px, #00888F, #FFF);
+          @include css-badge-text(24px, 26px, 12px, #00888F, #FFF);
+        }
+      }
+    }
+  }
+  &.nav-bar-small {
+    font-size: 14px;
+    line-height: 20px;
+    .nav-item {
+      .nav-link {
+        border: none;
+        border-bottom: 2px solid transparent;
+        position: relative;
+        font-weight: 500;
+        color: $accent-blue-light-100;
+        border-radius: 0;
+        padding:0 0 7px 0;
+        margin: 0;
+        .line-tab {
+          display: block;
+          width: 100%;
+          height: 3px;
+          background: $white;
+          border-radius: 2px 2px 0 0;
+          position: relative;
+          top: 11px;
+        }
+        @include css-badge-num(16px, 15px, 10px, #E1F5F5, #00888F);
+        @include css-badge-text(16px, 15px, 10px, #E1F5F5, #00888F);
+        &.active {
+          border: none;
+          border-bottom: 2px solid transparent;
+          position: relative;
+          font-weight: 600;
+          color: $accent-blue-light-100;
+          border-radius: 0;
+          padding:0 0 7px 0;
+          .line-tab {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: $accent-light-green;
+            border-radius: 2px 2px 0 0;
+            position: relative;
+            top: 11px;
+          }
+          @include css-badge-num(16px, 15px, 10px, #00888F, #FFF);
+          @include css-badge-text(16px, 15px, 10px, #00888F, #FFF);
+        }
+      }
+    }
+  }
+  .nav-item {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    &:not(:first-child) {
+      margin-left: 2.625rem;
+    }
+
+    &.--disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .nav-link {
+    .custom-badge-dot {
+      padding: 3px;
+      position: absolute;
+      top: -5px;
+      display: block;
+      right: -5px;
+      border-radius: 5px;
+      background-color: $primary-shade-2;
+      &.c-red {
+        background-color: $accent-red-500;
+        color: $accent-red-500;
+      }
+    }
+
+    &:not(.disabled):not(.active):hover {
+      border-bottom: 2px solid transparent;
+      color: $accent-light-green !important;
+      font-weight: 500;
+
+      .custom-badge-dot {
+        background-color: rgba(0,0,0, 0.5);
+        color: $white-light-grey;
+        &.c-red {
+          background-color: $accent-red-500;
+          color: $white-light-grey;
+        }
+      }
+
+      .custom-badge-num {
+        background-color: $accent-light-green;
+        color: $white;
+        &.c-red {
+          background-color: $accent-light-green;
+          color: $white;
+        }
+      }
+    }
+
+    &.active {
+      font-weight: 600;
+      color: $accent-light-green !important;
+      .custom-badge-dot {
+        background-color: $primary-base;
+        color: $white-light-grey;
+        &.c-red {
+          background-color: $accent-red-500;
+          color: $white-light-grey;
+        }
+      }
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      color: $black-shade-1 !important;
+      opacity: 0.5;
+
+      .custom-badge-dot,
+      .custom-badge-num,
+      .custom-badge-text {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+.custom-top-tab-content {
+  border: none !important;
+  padding: 2rem 2rem 2rem 0;
+
+  &.small-top {
+    padding-top: 8rem;
+  }
+
+  .tab-pane {
+    padding: 0;
+  }
+}

@@ -1,0 +1,30 @@
+.container-single-select {
+  display: flex; 
+  flex-direction: column;
+  height: 500px;
+  .inputs-container {
+    .custom-select-input {
+      .test-select__control {
+        &.test-select__control--is-focused {
+          border: 1px solid #00888F;
+          box-sizing: border-box;
+          box-shadow: 0px 0px 4px 1px rgba(0, 136, 143, 0.25);
+        }
+        &.test-select__control--is-disabled {
+          .test-select__single-value--is-disabled {
+            color: #49494F;
+          }
+        }
+      }
+      &.--error {
+        .test-select__control {
+          &.test-select__control--is-focused {
+            border: 1px solid #F56C7E;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 0px 3px #FFDBE0;
+          }
+        }
+      }
+    }
+  }
+}

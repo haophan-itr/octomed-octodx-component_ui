@@ -1,0 +1,172 @@
+@import '../../styles/variables';
+
+.custom-dropdown-input {
+  &.none-min-width {
+    min-width: unset;
+  }
+  &.--disabled {
+    cursor: not-allowed;
+  }
+  .fill-background {
+    .dropdown-toggle {
+      background-color: $accent-blue-100 !important;
+      color: $white !important;
+      border: unset !important;
+      &:disabled {
+        &:hover {
+          background-color: $accent-blue-100 !important;
+        }
+      }
+      &:hover {
+        background-color: $accent-blue-200 !important;
+      }
+      &:after {
+        content: ' ';
+        background-image: url('../../static/images/caret-light.svg') !important;
+        background-size: 20px 20px;
+        height: 20px;
+        width: 20px;
+        border-top: none;
+      }
+    }
+  }
+  .dropdown {
+    .dropdown-large {
+      height: 40px;
+      min-width: 120px;
+      padding: 10px 12px;
+    }
+    .dropdown-small {
+      height: 32px;
+      min-width: 120px;
+      padding: 6px 12px;
+    }
+    .dropdown-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $accent-blue-light-100; 
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: $white;
+      box-shadow: none;
+      border: 1px solid $accent-white-light-300;
+      border-radius: 0.25rem;
+      line-height: 22px;
+      &:hover {
+        background:$accent-white-light-900;
+      }
+      &:after {
+        content: ' ';
+        background-image: url('../../static/images/caret.svg');
+        background-size: 20px 20px;
+        height: 20px;
+        width: 20px;
+        border-top: none;
+      }
+  
+      &:focus {
+        border: 1px solid $accent-white-light-300;
+        box-shadow: unset;
+        background-color: $white;
+        color: $accent-blue-light-100;
+        outline: none;
+        box-shadow: none !important;
+      }
+  
+      &:disabled {
+        background-color: $accent-white-1;
+        border: unset;
+        cursor: not-allowed;
+        color: $accent-blue-light-200; 
+      }
+  
+      &.--error {
+        border: 1px solid $accent-negative;
+      }
+    }
+    .dropdown-menu {
+      width: 100%;
+      box-shadow: $shadow-high;
+      border: none;
+      max-height: 20rem;
+      overflow: auto;
+      border-radius: 0 0 4px 4px;
+      .dropdown-item {
+        background-color: $white;
+        color: $accent-black;
+        font-size: 14px;
+        font-weight: 400;
+        outline: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        padding: 9px 9px 9px 40px;
+        &.hide-icon-checked {
+          &.active, &:hover {
+            &::before {
+              display: none;
+            }
+          }
+        }
+        &:not(:first-child) {
+          border-top: 1px solid $accent-white-light-300;
+        }
+        &:hover {
+          background-color: $accent-white-light-900;
+          color: $black-rich;
+          padding-left: 40px;
+        }
+        &.active {
+          color: $black-rich;
+          display: flex;
+          justify-content: flex-start;
+          padding-left: 40px;
+          &::before {
+            content: ' ';
+            background-image: url('../../static/images/check.svg');
+            background-size: 20px 20px;
+            height: 20px;
+            width: 20px;
+            border-top: none;
+            position: absolute;
+            left: 10px;
+          }
+        }
+      }
+    }
+    &__label {
+      margin-bottom: 0.25rem;
+    }
+  
+    &__error-message {
+      color: $accent-negative;
+      font-size: 0.75rem;
+    }
+  
+    &__warning-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 0.25rem;
+    }
+  
+    &__warning-message {
+      flex: 1;
+      color: $accent-dark-orange;
+      font-size: 0.75rem;
+    }
+  
+    &__warning-button {
+      color: $blue-500;
+      font-size: 0.75rem;
+      box-shadow: none !important;
+      text-decoration: none !important;
+      padding: 0;
+    }
+  }
+}

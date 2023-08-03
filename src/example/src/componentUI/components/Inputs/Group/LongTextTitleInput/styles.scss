@@ -1,0 +1,128 @@
+@import '../../../../styles/variables';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.long-text-title-input{
+  &.text-title-small {
+    .title{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: $black-shade-5;
+      margin-bottom: 4px;
+    }
+    .long-text-input{
+      height: 100px;
+      width: 200px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $black-shade-5;
+      &::placeholder{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $accent-white-2;
+      }
+      &:disabled {
+        background: $accent-white-1;
+        cursor: not-allowed;
+        color: $accent-blue-light-100;
+        border: unset;
+      }
+      &:focus {
+        border: 1px solid $accent-light-green;
+        box-shadow: 0px 0px 4px 1px rgba(0, 136, 143, 0.25);
+      }
+    }
+    .error-message{
+      margin-top: 4px;
+      color: $red-base;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.01em;
+    }
+    &.--error {
+      .long-text-input{
+        background-color: $accent-white;
+        border: 1px solid $red-base;
+        &:focus {
+          background: $white;
+          box-shadow: unset;
+          box-shadow: 0px 0px 0px 3px #ffdbe0;
+        }
+      }
+    }
+  }
+  &.text-title-large {
+    .title{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: $black-shade-5;
+      margin-bottom: 4px;
+    }
+    .long-text-input{
+      height: 100px;
+      width: 200px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: $black-shade-5;
+      &::placeholder{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $accent-white-2;
+      }
+      &:disabled {
+        background: $accent-white-1;
+        cursor: not-allowed;
+        color: $accent-blue-light-100;
+        border: unset;
+      }
+      &:focus {
+        border: 1px solid $accent-light-green;
+        box-shadow: 0px 0px 4px 1px rgba(0, 136, 143, 0.25);
+      }
+      &.--disabled {
+        background-color: $accent-white-light-300;
+        border: 1px solid $accent-white-1;
+        cursor: not-allowed;
+      }
+    }
+    .error-message{
+      margin-top: 4px;
+      color: $red-base;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $red-base; 
+    }
+    &.--error {
+      .long-text-input{
+        background-color: $accent-white;
+        border: 1px solid $red-base;
+        &:focus {
+          background: $white;
+          box-shadow: unset;
+          box-shadow: 0px 0px 0px 3px #ffdbe0;
+        }
+      }
+    }
+  }
+}
+
